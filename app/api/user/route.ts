@@ -1,6 +1,6 @@
 import { db } from "@/libs/db";
 import { NextResponse } from "next/server";
-import type { User } from "@prisma/client";
+import type { User } from "../../../prisma/generated/client";
 import { hash } from "bcrypt";
 import * as z from "zod";
 

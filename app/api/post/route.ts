@@ -1,6 +1,6 @@
 import { db } from "@/libs/db";
 import { NextResponse } from "next/server";
-import type { Post } from "@prisma/client";
+import type { Post } from "../../../prisma/generated/client";
 import * as z from "zod";
 
 const postSchema = z.object({

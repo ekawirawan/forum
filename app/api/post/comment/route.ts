@@ -1,6 +1,6 @@
 import { db } from "@/libs/db";
 import { NextResponse } from "next/server";
-import type { Comment } from "@prisma/client";
+import type { Comment } from "../../../../prisma/generated/client";
 import * as z from "zod";
 
 const commentSchema = z.object({
