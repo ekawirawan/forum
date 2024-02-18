@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  //url      = env("DATABASE_URL")
+}
+
+model User {
+  idUser String @id @default(uuid())
+  username String @unique
+  password String
+  fullName String
+  bio String?
+  createdAt DateTime @default(now())
+  posts Post[]
+  comments Comment[]
+}
+
+model Post {
+  idPost String @id @default(uuid())
+  content String @db.VarChar(250)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  author User @relation(fields: [authorId], references: [idUser], onDelete: Cascade, onUpdate: Cascade)
+  authorId String
+  comments Comment[]
+}
+
+model Comment {
+  idComment String @id @default(uuid())
+  content String @db.VarChar(200)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  author User @relation(fields: [authorId], references: [idUser], onDelete: Cascade, onUpdate: Cascade)
+  authorId String
+  post Post @relation(fields: [postId], references: [idPost], onDelete: Cascade, onUpdate: Cascade)
+  postId String
+}
