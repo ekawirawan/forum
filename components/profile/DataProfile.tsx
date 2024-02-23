@@ -46,13 +46,13 @@ const DataProfile = ({ idUser }: { idUser: string }) => {
       </div>
       <div className="lg:w-3/5 space-y-5 text-start">
         <div className="flex items-center">
-          <span className="w-1/5 font-medium text-start align-top text-slate-700">
+          <span className="w-32 font-medium text-start align-top text-slate-700">
             Username
           </span>
-          <span className=" text-slate-700">{data?.username}</span>
+          <span className="text-slate-700">{data?.username}</span>
         </div>
         <div className="flex items-center">
-          <span className="w-1/5 align-top font-medium text-slate-700">
+          <span className="w-32 align-top font-medium text-slate-700">
             Full Name
           </span>
           <span className="flex-1 flex items-center gap-4">
@@ -65,9 +65,7 @@ const DataProfile = ({ idUser }: { idUser: string }) => {
           </span>
         </div>
         <div className="flex">
-          <span className="w-1/5 align-top font-medium text-slate-700">
-            Bio
-          </span>
+          <span className="w-32 align-top font-medium text-slate-700">Bio</span>
           <span
             className={`flex-1 flex items-center ${data?.bio ? "gap-4" : ""}`}
           >

@@ -20,13 +20,12 @@ const MobileNav = () => {
     <>
       <button type="button" onClick={openMenu} className="block lg:hidden">
         <svg
-          width="42"
-          height="42"
+          width="40"
+          height="40"
           viewBox="0 0 42 42"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect x="14" y="8.5" width="28" height="3" rx="1.5" fill="#111827" />
           <rect x="14" y="19.5" width="28" height="3" rx="1.5" fill="#111827" />
           <rect x="27" y="30.5" width="15" height="3" rx="1.5" fill="#111827" />
         </svg>

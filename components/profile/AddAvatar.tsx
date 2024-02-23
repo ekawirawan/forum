@@ -17,7 +17,7 @@ const AddAvatar = () => {
     <>
       <div>
         <Button type="button" onClick={handleOpenModal} className="light bw">
-          Upload profile photo
+          Upload photo
         </Button>
         <Modal
           isOpen={isOpen}
