@@ -14,7 +14,7 @@ const Header = () => {
   const { data } = useSession();
   return (
     <header className="sticky top-0 border-b bg-white/10 backdrop-blur-sm z-10">
-      <nav className="flex items-center justify-between h-16 px-6">
+      <nav className="flex items-center justify-between h-16 px-4">
         <Link href="/" className="font-semibold text-xl">
           TheForum
         </Link>
