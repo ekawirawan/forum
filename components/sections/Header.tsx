@@ -8,6 +8,7 @@ import SignOutNav from "../ui/SignOutNav";
 import { useSession } from "next-auth/react";
 import Dropdown from "../ui/dropdown/Dropdown";
 import MenuDropdown from "../ui/dropdown/MenuDropdown";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   const { data } = useSession();
@@ -17,7 +18,7 @@ const Header = () => {
         <Link href="/" className="font-semibold text-xl">
           TheForum
         </Link>
-        <Dropdown className="success">
+        <Dropdown className="hidden lg:block success">
           <Button type="button" className="solid p-0">
             <ProfilePhoto character={data?.user.fullName} />
           </Button>
@@ -25,6 +26,7 @@ const Header = () => {
             <SignOutNav />
           </MenuDropdown>
         </Dropdown>
+        <MobileNav />
       </nav>
     </header>
   );

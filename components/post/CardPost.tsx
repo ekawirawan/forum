@@ -30,19 +30,17 @@ const CardPost = ({ idPost, author, content, _count, createdAt }: Post) => {
         <div className="flex gap-3 p-3">
           <Link href={`/forum/${idPost}`} className="btn light bw sm">
             <MessageCircle opacity={0.7} />
-            <span className="text-slate-600 text-sm">
-              {_count.comments > 0 && _count.comments}
-              <span className="hidden lg:inline">
-                {_count.comments < 2 ? " comment" : " comments"}
-              </span>
+            {_count.comments > 0 && _count.comments}
+            <span className="hidden lg:inline text-slate-600 text-sm">
+              {_count.comments < 2 ? " comment" : " comments"}
             </span>
           </Link>
-          <Button type="button" className="flex light bw sm">
+          {/* <Button type="button" className="flex light bw sm">
             <Share2 opacity={0.7} />
             <span className="hidden text-slate-600 text-sm lg:block">
               share
             </span>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </Card>

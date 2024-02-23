@@ -2,8 +2,6 @@ import MakePost from "@/components/post/MakePost";
 import Post from "@/components/post/Post";
 import Aside from "@/components/sections/Aside";
 import Header from "@/components/sections/Header";
-import { authOptions } from "@/libs/auth";
-import { getServerSession } from "next-auth/next";
 
 export default async function Home() {
   return (
