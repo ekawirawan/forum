@@ -26,14 +26,36 @@ const MobileNav = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect x="14" y="19.5" width="28" height="3" rx="1.5" fill="#111827" />
-          <rect x="27" y="30.5" width="15" height="3" rx="1.5" fill="#111827" />
+          <rect
+            x="14"
+            y="8.5"
+            width="28"
+            height="2.5"
+            rx="1.5"
+            fill="#111827"
+          />
+          <rect
+            x="14"
+            y="19.5"
+            width="28"
+            height="2.5"
+            rx="1.5"
+            fill="#111827"
+          />
+          <rect
+            x="27"
+            y="30.5"
+            width="15"
+            height="2.5"
+            rx="1.5"
+            fill="#111827"
+          />
         </svg>
       </button>
       <div
         className={`${
-          isOpen ? "left-0" : "left-full"
-        } transition-all bg-white absolute w-full h-screen left-0 right-0 bottom-0 top-0`}
+          isOpen ? "right-0" : "right-full"
+        } transition-all bg-white absolute w-full h-screen bottom-0 top-0`}
       >
         <div className="flex items-center justify-between px-5 py-5">
           <span className="block font-semibold text-2xl">Menu</span>
